@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date: 2022/9/10
  */
 // @MapperScan所扫描的要换成自己需要的mapper
-@MapperScan("cc.leuxr.repository.mapper*")
+//@MapperScan("cc.lexur.repository.mapper")
 @Configuration
 public class InitConfig {
 

@@ -4,11 +4,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.context.annotation.PropertySource;
 
-/**
- * @Description: cc.lexur.repository.config
- * @Auther: lexur
- * @Date: 2022/9/10
- */
 @Configuration
 public class DatasourceProperties {
 

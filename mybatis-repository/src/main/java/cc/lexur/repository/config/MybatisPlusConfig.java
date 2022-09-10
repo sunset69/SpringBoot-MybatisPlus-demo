@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.enums.DBType;
 import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 import com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean;
 import org.apache.ibatis.mapping.DatabaseIdProvider;
-import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.boot.autoconfigure.MybatisProperties;
 import org.mybatis.spring.boot.autoconfigure.SpringBootVFS;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +18,11 @@ import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.ObjectUtils;
 import org.springframework.util.StringUtils;
+import org.apache.ibatis.plugin.Interceptor;
+import com.baomidou.mybatisplus.plugins.PaginationInterceptor;
 
 import javax.sql.DataSource;
 
-/**
- * @Description: cc.lexur.repository.config
- * @Auther: lexur
- * @Date: 2022/9/10
- */
 @Configuration
 @AutoConfigureAfter(DatasourceProperties.class)
 @EnableConfigurationProperties(MybatisProperties.class)
@@ -49,7 +45,6 @@ public class MybatisPlusConfig {
 
     /**
      * mybatis-plus分页插件
-     *
      */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
@@ -60,7 +55,7 @@ public class MybatisPlusConfig {
 
     /**
      * 这里全部使用mybatis-autoconfigure 已经自动加载的资源,不手动指定
-     *
+     * <p>
      * 配置文件和mybatis-boot的配置文件同步
      */
     @Bean
